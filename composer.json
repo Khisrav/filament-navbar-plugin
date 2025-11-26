@@ -3,6 +3,7 @@
     "description": "A Filament v3 plugin that collapses/expands the navbar on hover",
     "type": "library",
     "license": "MIT",
+    "version": "1.0.0",
     "keywords": [
         "filament",
         "filament-plugin",
