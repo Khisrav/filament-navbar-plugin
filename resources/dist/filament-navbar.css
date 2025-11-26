@@ -1,0 +1,162 @@
+/* Filament Navbar Auto-Collapse Plugin */
+
+/* Target the sidebar container */
+aside.fi-sidebar {
+    transition: width 0.3s ease-in-out !important;
+}
+
+/* Default collapsed state - only show icons */
+aside.fi-sidebar:not(:hover) {
+    width: 4rem !important;
+}
+
+/* Expanded state on hover */
+aside.fi-sidebar:hover {
+    width: var(--sidebar-width, 16rem) !important;
+}
+
+/* Hide text labels when collapsed */
+aside.fi-sidebar:not(:hover) .fi-sidebar-item-label,
+aside.fi-sidebar:not(:hover) .fi-sidebar-group-label {
+    opacity: 0;
+    width: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    transition: opacity 0.2s ease-in-out, width 0.2s ease-in-out;
+}
+
+/* Show text labels when expanded */
+aside.fi-sidebar:hover .fi-sidebar-item-label,
+aside.fi-sidebar:hover .fi-sidebar-group-label {
+    opacity: 1;
+    width: auto;
+    transition: opacity 0.3s ease-in-out 0.1s, width 0.3s ease-in-out;
+}
+
+/* Hide badges when collapsed */
+aside.fi-sidebar:not(:hover) .fi-badge {
+    opacity: 0;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    transition: opacity 0.2s ease-in-out;
+}
+
+/* Show badges when expanded */
+aside.fi-sidebar:hover .fi-badge {
+    opacity: 1;
+    width: auto;
+    height: auto;
+    transition: opacity 0.3s ease-in-out 0.1s;
+}
+
+/* Center icons when collapsed */
+aside.fi-sidebar:not(:hover) .fi-sidebar-item,
+aside.fi-sidebar:not(:hover) .fi-sidebar-group-button {
+    justify-content: center !important;
+    padding-left: 0.75rem !important;
+    padding-right: 0.75rem !important;
+}
+
+/* Restore normal padding when expanded */
+aside.fi-sidebar:hover .fi-sidebar-item,
+aside.fi-sidebar:hover .fi-sidebar-group-button {
+    justify-content: flex-start !important;
+}
+
+/* Handle sidebar group items (sub-links) */
+aside.fi-sidebar:not(:hover) .fi-sidebar-group-items {
+    display: none;
+}
+
+aside.fi-sidebar:hover .fi-sidebar-group-items {
+    display: block;
+}
+
+/* Hide group collapse/expand icon when collapsed */
+aside.fi-sidebar:not(:hover) .fi-sidebar-group-button svg:last-child {
+    display: none;
+}
+
+/* Adjust icon spacing */
+aside.fi-sidebar:not(:hover) .fi-sidebar-item-icon,
+aside.fi-sidebar:not(:hover) .fi-sidebar-group-icon {
+    margin-right: 0 !important;
+}
+
+aside.fi-sidebar:hover .fi-sidebar-item-icon,
+aside.fi-sidebar:hover .fi-sidebar-group-icon {
+    margin-right: 0.75rem !important;
+}
+
+/* Ensure smooth transitions for all child elements */
+aside.fi-sidebar * {
+    transition-property: opacity, width, margin, padding;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in-out;
+}
+
+/* Keep the main content area responsive to sidebar width changes */
+main.fi-main {
+    transition: margin-left 0.3s ease-in-out;
+}
+
+/* Handle user menu in sidebar */
+aside.fi-sidebar:not(:hover) .fi-user-menu-button .fi-avatar ~ * {
+    opacity: 0;
+    width: 0;
+    overflow: hidden;
+}
+
+aside.fi-sidebar:hover .fi-user-menu-button .fi-avatar ~ * {
+    opacity: 1;
+    width: auto;
+}
+
+/* Adjust tenant switcher when collapsed */
+aside.fi-sidebar:not(:hover) .fi-tenant-menu-button span {
+    opacity: 0;
+    width: 0;
+    overflow: hidden;
+}
+
+aside.fi-sidebar:hover .fi-tenant-menu-button span {
+    opacity: 1;
+    width: auto;
+}
+
+/* Handle navigation tooltips - show when collapsed */
+aside.fi-sidebar:not(:hover) .fi-sidebar-item:hover::after,
+aside.fi-sidebar:not(:hover) .fi-sidebar-group-button:hover::after {
+    content: attr(aria-label);
+    position: absolute;
+    left: 100%;
+    margin-left: 0.5rem;
+    padding: 0.5rem 0.75rem;
+    background-color: rgb(var(--gray-900));
+    color: rgb(var(--gray-50));
+    border-radius: 0.375rem;
+    font-size: 0.875rem;
+    white-space: nowrap;
+    z-index: 50;
+    pointer-events: none;
+}
+
+/* Dark mode support for tooltips */
+.dark aside.fi-sidebar:not(:hover) .fi-sidebar-item:hover::after,
+.dark aside.fi-sidebar:not(:hover) .fi-sidebar-group-button:hover::after {
+    background-color: rgb(var(--gray-700));
+    color: rgb(var(--gray-100));
+}
+
+/* Prevent layout shift during transitions */
+aside.fi-sidebar {
+    overflow-x: hidden;
+}
+
+/* Ensure icons remain visible and centered */
+aside.fi-sidebar:not(:hover) .fi-sidebar-item-icon,
+aside.fi-sidebar:not(:hover) .fi-sidebar-group-icon {
+    flex-shrink: 0;
+}
+
