@@ -5,7 +5,7 @@
 After installing the package via Composer, the plugin works automatically with no configuration needed:
 
 ```bash
-composer require waffentrager/filament-navbar-plugin
+composer require waffentrager/filament-autohide-navbar
 ```
 
 The sidebar will now:

@@ -9,7 +9,7 @@ use Spatie\LaravelPackageTools\PackageServiceProvider;
 
 class FilamentNavbarServiceProvider extends PackageServiceProvider
 {
-    public static string $name = 'filament-navbar-plugin';
+    public static string $name = 'filament-autohide-navbar';
 
     public function configurePackage(Package $package): void
     {
@@ -25,8 +25,8 @@ class FilamentNavbarServiceProvider extends PackageServiceProvider
         if (config('filament-navbar.enabled', true)) {
             // Register CSS asset
             FilamentAsset::register([
-                Css::make('filament-navbar-plugin', __DIR__ . '/../resources/dist/filament-navbar.css'),
-            ], package: 'waffentrager/filament-navbar-plugin');
+            Css::make('filament-autohide-navbar', __DIR__ . '/../resources/dist/filament-navbar.css'),
+        ], package: 'waffentrager/filament-autohide-navbar');
         }
     }
 }

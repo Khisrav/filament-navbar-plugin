@@ -1,6 +1,6 @@
 # Changelog
 
-All notable changes to `filament-navbar-plugin` will be documented in this file.
+All notable changes to `filament-autohide-navbar` will be documented in this file.
 
 ## v1.0.0 - 2025-11-26
 
