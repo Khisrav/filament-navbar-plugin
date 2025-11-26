@@ -1,5 +1,5 @@
 {
-    "name": "waffentrager/filament-autohide-navbar",
+    "name": "khisrav/filament-autohide-navbar",
     "description": "A Filament v3 plugin that collapses/expands the navbar on hover",
     "type": "library",
     "license": "MIT",
@@ -25,12 +25,12 @@
     },
     "autoload": {
         "psr-4": {
-            "Waffentrager\\FilamentNavbar\\": "src/"
+            "Khisrav\\FilamentNavbar\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Waffentrager\\FilamentNavbar\\Tests\\": "tests/"
+            "Khisrav\\FilamentNavbar\\Tests\\": "tests/"
         }
     },
     "scripts": {
@@ -50,11 +50,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Waffentrager\\FilamentNavbar\\FilamentNavbarServiceProvider"
+                "Khisrav\\FilamentNavbar\\FilamentNavbarServiceProvider"
             ]
         }
     },
-    "minimum-stability": "dev",
-    "prefer-stable": true
+    "minimum-stability": "dev"
 }
 

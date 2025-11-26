@@ -5,7 +5,7 @@ Get your Filament sidebar auto-collapsing in under 2 minutes!
 ## Step 1: Install
 
 ```bash
-composer require waffentrager/filament-autohide-navbar
+composer require khisrav/filament-autohide-navbar
 ```
 
 ## Step 2: Done! 🎉
@@ -115,7 +115,7 @@ See the [EXAMPLES.md](EXAMPLES.md) file for instructions on disabling the plugin
 - 📖 [Full Documentation](README.md)
 - 🎨 [Visual Guide](VISUAL_GUIDE.md)
 - 💡 [More Examples](EXAMPLES.md)
-- 🐛 [Report Issues](https://github.com/waffentrager/filament-autohide-navbar/issues)
+- 🐛 [Report Issues](https://github.com/Khisrav/filament-autohide-navbar/issues)
 
 ## Next Steps
 

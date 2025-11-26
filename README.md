@@ -26,7 +26,7 @@ A FilamentPHP v3 plugin that automatically collapses the sidebar navigation to s
 Install the package via Composer:
 
 ```bash
-composer require waffentrager/filament-autohide-navbar
+composer require khisrav/filament-autohide-navbar
 ```
 
 That's it! The plugin will automatically register itself and apply the auto-collapse behavior to your Filament sidebar.
@@ -132,7 +132,7 @@ This plugin is compatible with:
 
 ## Support
 
-If you encounter any issues or have questions, please [open an issue](https://github.com/waffentrager/filament-autohide-navbar/issues) on GitHub.
+If you encounter any issues or have questions, please [open an issue](https://github.com/Khisrav/filament-autohide-navbar/issues) on GitHub.
 
 ## License
 
@@ -140,7 +140,7 @@ This package is open-source software licensed under the [MIT license](LICENSE).
 
 ## Credits
 
-- [Waffentrager](https://github.com/waffentrager)
+- [Khisrav](https://github.com/Khisrav)
 - [All Contributors](../../contributors)
 
 ## Changelog

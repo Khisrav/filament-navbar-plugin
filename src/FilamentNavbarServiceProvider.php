@@ -1,6 +1,6 @@
 <?php
 
-namespace Waffentrager\FilamentNavbar;
+namespace Khisrav\FilamentNavbar;
 
 use Filament\Support\Assets\Css;
 use Filament\Support\Facades\FilamentAsset;
@@ -26,7 +26,7 @@ class FilamentNavbarServiceProvider extends PackageServiceProvider
             // Register CSS asset
             FilamentAsset::register([
             Css::make('filament-autohide-navbar', __DIR__ . '/../resources/dist/filament-navbar.css'),
-        ], package: 'waffentrager/filament-autohide-navbar');
+        ], package: 'khisrav/filament-autohide-navbar');
         }
     }
 }
